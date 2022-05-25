@@ -4,8 +4,13 @@
    
    <script>
      function convert() {
-      var val = document.getElementById("tags").value;
-      document.getElementById("out").innerHTML = "https://rule34.xxx/index.php?page=post&s=list&tags=" + val;
+      if(document.getElementById("tags").value.length == 0)
+      {
+       const tagArr = document.getElementById("tags").value.split(",");
+       alert(tagArr[1]);
+      }
+      //var val = document.getElementById("tags").value;
+      //document.getElementById("out").innerHTML = "https://rule34.xxx/index.php?page=post&s=list&tags=" + val;
      }
    </script>
      
@@ -15,18 +20,18 @@
    
     <h1>Enter your desired tags</h1>
     Enter tags the post must contain  (seperated by commas): <br>
-    <input type="text" id="tags">
-    Enter tags that the post cannot contain:
-    <input type="text" id="exclude">
-    Enter tags that the post must contain one of (seperate groups with a semicolon):
-    <input type="text" id="or">
-    Enter a beginning of a tag the post must contain:
-    <input type="text" id="begin">
-    Enter the beginning and and of an tag (seperate parts with commas and pairs by semicolons):
-    <input type="text" id="beginend">
-    Enter the score the post must have (use greater, lesser and equal signs):
-    <input type="text" id="score">
-    <button type="button" onclick="convert()">Convert</button>
+    <input type="text" id="tags"> <br>
+    Enter tags that the post cannot contain: <br>
+    <input type="text" id="exclude"> <br>
+    Enter tags that the post must contain one of (seperate groups with a semicolon): <br>
+    <input type="text" id="or"> <br>
+    Enter a beginning of a tag the post must contain: <br>
+    <input type="text" id="begin"> <br>
+    Enter the beginning and and of an tag (seperate parts with commas and pairs by semicolons): <br>
+    <input type="text" id="beginend"> <br>
+    Enter the score the post must have (use greater, lesser and equal signs): <br>
+    <input type="text" id="score"> <br>
+    <button type="button" onclick="convert()">Convert</button> <br>
     <br>
     <p id="out">empty</p>
     
