@@ -4,11 +4,12 @@
    
    <script>
      function convert() {
-      if(document.getElementById("tags").value.length == 0)
-      {
-       const tagArr = document.getElementById("tags").value.split(",");
+      //if(document.getElementById("tags").value.length == 0)
+      //{
+       var als = document.getElementById("tags").value;
+       const tagArr = als.split(",");
        alert(tagArr[1]);
-      }
+     // }
       //var val = document.getElementById("tags").value;
       //document.getElementById("out").innerHTML = "https://rule34.xxx/index.php?page=post&s=list&tags=" + val;
      }
