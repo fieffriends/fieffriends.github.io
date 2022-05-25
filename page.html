@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>Calculate page numbers for R34</title>
+<script>
+function calculate() {
+  var inStr = document.getElementById("in").value;
+  var input = parseInt(inStr);
+  input = input * 42;
+  document.getElementById("out").innerHTML = input;
+}
+  </script>
+  </head>
+ <body>
+   <h1>Convert number to R34 page id</h1>
+   <input type="text" id="in"> <br>
+   <button type="button" onclick="calculate">Calculate</button> <br>
+   <p id="out"></p>
+  </body>
+  </html>
