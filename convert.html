@@ -4,8 +4,8 @@
    
    <script>
      function convert() {
-      //document.getElementById("out").innerHTML = document.getElementById("tags").value;
-      alert("done");
+      var val = document.getElementById("tags").value;
+      alert(val);
      }
    </script>
      
@@ -14,7 +14,8 @@
   <body>
    
     <h1>Enter your desired tags</h1>
-    <button type="button" onclick="convert()">Buttt</button>
+    <input type="text" id="tags">
+    <button type="button" onclick="convert()">Convert</button>
     <br>
     <p id="out">empty</p>
     
