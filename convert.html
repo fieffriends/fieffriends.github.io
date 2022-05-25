@@ -1,0 +1,34 @@
+<html>
+ <head>
+   <title>Convert to R34 search</title>
+   
+   <script>
+     function convert() {
+       document.getElementById("out").innerHTML = tags;
+     }
+   </script>
+     
+  </head>
+  
+  <body>
+    <h1>Enter your desired tags</h1>
+    
+    <form id="poke">
+      tags: <input type="text" name="tags"> Seperate by spaces<br>
+      exclude tags: <input type="text" name="sub"> <br>
+      or tags: <input type="text" name="or"> Seperate groups by semicolons<br>
+      tag beginns with: <input type="text" name="begin"> <br>
+      tag beginns and ends with: <input type="text" name="surround"> Seperate beginning and end by spaces, pairs with semicolons <br>
+      has score: <input type="text" name="score"> Enter score with greater, lesser or equal sign <br>
+      <input type="button" onclick="convert()">
+    </form>
+    
+    <br>
+    <p id="out"> </p>
+    
+  </body>
+</html>
+    
+    
+      
+    
