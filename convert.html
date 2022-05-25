@@ -4,14 +4,58 @@
    
    <script>
      function convert() {
-      //if(document.getElementById("tags").value.length == 0)
-      //{
-       var als = document.getElementById("tags").value;
+      
+      const defaultUrl = "https://rule34.xxx/index.php?page=post&s=list&tags=";
+      var outUrl = defaultUrl;
+      
+      if(document.getElementById("tags").value.length == 0)
+      {
+       var tag = document.getElementById("tags").value;
        const tagArr = als.split(",");
-       alert(tagArr[1]);
-     // }
-      //var val = document.getElementById("tags").value;
-      //document.getElementById("out").innerHTML = "https://rule34.xxx/index.php?page=post&s=list&tags=" + val;
+       for(int i = 0, i <= tagArr.length - 1; i++)
+       {
+        outUrl += (tagArr[i] + "+");
+       }
+      }
+      
+      if(document.getElementById("exclude").value.length == 0)
+      {
+       var ex = document.getElementById("exclude").value;
+       const exArr = als.split(",");
+       for(int i = 0, i <= exArr.length - 1; i++)
+       {
+        outUrl += ("-" + tagArr[i] + "+");
+       }
+      }
+      
+     if(document.getElementById("or").value.length == 0)
+      {
+       var or = document.getElementById("or").value;
+       const orArr = als.split(";");
+       for(int i = 0, i <= orArr.length - 1; i++)
+       {
+        var partArr = orArr[i];
+        partArr = partArr.split(",");
+        for(int b = 0; b <= partArr.length - 1; b++)
+        {
+         if(b == 1)
+         {
+           outUrl += ("%28+" + orArr[i] + "+");
+         }
+         else if(b == partArr.length - 1)
+         {
+           outUrl += (orArr[i] + "+29%+");
+         }
+         else
+         {
+          outUrl += ("+%7e+" + orArr[i] + "+");
+         }
+        }
+       }
+       
+       alert(outurl);
+      }
+      
      }
    </script>
      
