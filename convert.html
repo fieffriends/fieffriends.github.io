@@ -4,8 +4,7 @@
    
    <script>
      function convert() {
-      var tags = document.getElementById("tags").value;
-      document.getElementById("out").innerHTML = tags;
+      //document.getElementById("out").innerHTML = document.getElementById("tags").value;
       alert("done");
      }
    </script>
@@ -13,17 +12,11 @@
   </head>
   
   <body>
+   
     <h1>Enter your desired tags</h1>
-    
-      tags: <input type="text" name="tags"> Seperate by spaces<br>
-      exclude tags: <input type="text" name="sub"> <br>
-      or tags: <input type="text" name="or"> Seperate groups by semicolons<br>
-      tag beginns with: <input type="text" name="begin"> <br>
-      tag beginns and ends with: <input type="text" name="surround"> Seperate beginning and end by spaces, pairs with semicolons <br>
-      has score: <input type="text" name="score"> Enter score with greater, lesser or equal sign <br>
-   <button type="button" onclick="convert()">Buttt</button>
+    <button type="button" onclick="convert()">Buttt</button>
     <br>
-    <p id="out"> </p>
+    <p id="out">empty</p>
     
   </body>
 </html>
