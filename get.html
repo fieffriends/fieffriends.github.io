@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script>
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+function do()
+      {
+        alert(httpGet(document.getElementById("url")));
+      }
+
+    </script>
+<head>
+<body>
+url get: <br>
+<input type="text" id="url"> <br>
+  <button type="button" onclick="do()">get</button>
+  <body>
+    </html>
