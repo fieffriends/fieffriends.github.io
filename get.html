@@ -1,26 +1,18 @@
 <html>
-  <head>
-    <script>
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
+<head>
+  <title>HTML GET requests</title>
+<script>
+function calculate() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", url, true);
+  document.getElementById("out").innerHTML = JSON.parse(xmlhttp.responseText);
 }
-
-function do()
-      {
-        alert("uno");
-        var stuff = httpGet(document.getElementById("url").value);
-        alert(stuff);
-      }
-
-    </script>
-</head>
-<body>
-url get: <br>
-<input type="text" id="url"> <br>
-  <button type="button" onclick="do()">get</button>
+  </script>
+  </head>
+ <body>
+   <h1>Display content of a HTML GET request</h1>
+   <input type="text" id="in"> <br>
+   <button type="button" onclick="calculate()">Calculate</button> <br>
+   <p id="out"></p>
   </body>
-    </html>
+  </html>
