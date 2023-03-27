@@ -1,0 +1,84 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #101010;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: min(max(calc(20px - 1vh),10px), 20px);
+}
+
+
+.topnav img {
+    max-height: 16px;
+}
+
+.topnav select {
+    float: left;
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 0px 5px 0px;
+    font-size: min(max(calc(20px - 1vh),10px), 20px);
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.homework {
+    position: fixed;
+    top: calc(min(max(calc(20px - 1vh),10px), 20px) + 16px);
+    max-width: 100%;
+    max-height: calc(100% - calc(min(max(calc(20px - 1vh),10px), 20px) + 16px));
+    height: auto;
+
+}
+
+.pageup {
+    position: fixed;
+    left: 0;
+    top: 49px;
+    width: 50%;
+    height: calc(100% - 49px);
+}
+
+.pagedown {
+    position: fixed;
+    left: 51%;
+    right: 0px;
+    top: 49px;
+    width: 50%;
+    height: calc(100% - 49px);
+}
+
+.exit {
+    float: right;
+}
+
+.error {
+    font-size: 10vh;
+    color: #000000;
+    -webkit-text-stroke: 0.2vh rgb(255, 254, 254);
+    position: absolute;
+}
