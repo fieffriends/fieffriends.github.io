@@ -19,7 +19,7 @@ async function loadGalleryData() {
     }
     const response = await fetch("https://nhentai-api.onrender.com/http://"+ip+"/api/gallery/" + id);
     if (response.status != 200) {
-        await document.getElementById("iswear").setAttribute("src", "https://i.nhentai.net/galleries/1493636/28.jpg");
+        await document.getElementById("iswear").setAttribute("src", "https://nhentai-api.onrender.com/https://i.nhentai.net/galleries/1493636/28.jpg");
         const p = document.getElementById("error");
         p.innerHTML = response.status + "\nCouldn't load gallery."
         code = response.status;
