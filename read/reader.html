@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="reader.css" title="default">
+    <script src="reader.js"></script>
+</head>
+
+<body onload="loadGalleryData()">
+    <div class="topnav">
+        <a onclick="pageUp()">&#8678;</a>
+        <a onclick="pageDown()">&#8680;</a>
+
+        <select id="bust" onchange="pageTo(this.value)">
+        </select>
+
+        <a onclick="backToGallery()" class="exit">Exit</a>
+    </div>
+
+    <div class="content" id="content">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Error loading image" class="homework" id="iswear" referrerpolicy="no-referrer">
+        <!--https://cdn.donmai.us/original/45/fe/__original_drawn_by_ivenglynn__45fe934cb117954112919a273d181014.jpg -->
+        <span id="error" class="error"></span>
+    </div>
+
+    <div class="pageup" onclick="pageDown()"></div> <!--Switch functions for jap-->
+    <div class="pagedown" onclick="pageUp()"></div>
+
+</body>
+
+</html>
